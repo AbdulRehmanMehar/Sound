@@ -205,47 +205,21 @@ if(process.platform == "darwin"){
 }
 //Developer Tools if !in_production
 
-if(process.env.NODE_ENV !== "production"){
-  headermenu.push({
-    label: "Developer Tools",
-    submenu: [
-      {
-        label:"Toggle",
-        accelerator : process.platform == "darwin" ? "Cmd+Alt+I" : "Ctrl+Shift+I",
-        click(item,focusedWindow){
-          focusedWindow.toggleDevTools();
-        }
-      },
-      {
-        role: "reload"
-      }
-    ]
-  });
-}
+// if(process.env.NODE_ENV !== "production"){
+//   headermenu.push({
+//     label: "Developer Tools",
+//     submenu: [
+//       {
+//         label:"Toggle",
+//         accelerator : process.platform == "darwin" ? "Cmd+Alt+I" : "Ctrl+Shift+I",
+//         click(item,focusedWindow){
+//           focusedWindow.toggleDevTools();
+//         }
+//       },
+//       {
+//         role: "reload"
+//       }
+//     ]
+//   });
+// }
 // // Now The App is Gonna Publish So It is Better to Comment it!
-
-
-
-//Support for Double-Click and OpenFiles
-app.on('will-finish-launching', ()=>{
-
-  // if(process.platform == "win32"){
-    ipc.on('get-file-data', function(event) {
-      var data = null;
-      if (process.platform != 'darwin' && process.argv.length >= 2) {
-        var openFilePath = process.argv[1];
-        fs.append('file.txt', openFilePath);
-      }
-    });
-  // }
-
-  app.on('open-file', function(event, filePath){
-    event.preventDefault();
-    if(filepath == undefined){return}
-    for(i=0; i < filepath.length; i++){
-      fs.appendFile('file.txt', filepath[i] + "\n");
-    }
-    mainWindow.reload();
-  });
-  
-});
