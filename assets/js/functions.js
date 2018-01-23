@@ -27,7 +27,7 @@ $(document).ready(() => {
           // document.getElementById('thepic').style.backgroundImage = base64;
 
         } else {
-          document.getElementById('thepic').setAttribute('src',"assets/img/sound-logo-white.png");
+          document.getElementById('thepic').setAttribute('src',"assets/img/sound-logo.png");
         }
       },
       onError: function(){
@@ -35,7 +35,7 @@ $(document).ready(() => {
         if(getThatExt != ""){
           document.getElementById("thetitle").innerHTML = file;
           document.getElementById("theartist").innerHTML = "unknown";
-          // document.getElementById('thepic').setAttribute('src',"assets/img/sound-logo-white.png");
+          document.getElementById('thepic').setAttribute('src',"assets/img/sound-logo.png");
         }
       }
     });
