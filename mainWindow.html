@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sound | A music player app</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="not-loaded">
+  <div class="main-meta">
+    <div class="background" style="background-image:url(assets/img/sound-logo.png);"></div>
+    <h1 class="main-title">Sound</h1>
+    <h5 class="main-desc">Made With <i class="fa fa-heart"></i> By Abdul Rehman</h5>
+  </div>
+  <div class="maindiv display-none container" style="margin:0 auto;">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li>
+            <input type="file" accept="audio/*" class="btn btn-default" id="createPlayList" multiple>
+            <label for="createPlayList"><i class="fa fa-plus"></i> Open Music Files</label>
+          </li>
+          <li>
+            <input type="file" class="btn btn-default" id="OpenDirectory" webkitdirectory directory>
+            <label for="OpenDirectory"><i class="fa fa-folder-o"></i> Open Directory</label>
+          </li>
+          <!-- <li>
+            <button type="button" class="btn btn-default" data-target="#reCord" data-toggle="modal"> <i class="fa fa-microphone"></i> Record Audio</button>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <ul class="nav flex-column" id="holder"></ul>
+    
+    <footer class="audio-played-wrap">
+      <!-- Audio Being Played -->
+      <div class="audio-played">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-xs-1" style="text-align:right" id="curTime">0:00</div><!-- initial timing -->
+            <div class="col-xs-10">
+              <div class="main-slide">
+                <input type="range" id="mainslide" min="0" step="0.01" value="0">
+              </div>
+            </div><!-- .main-slide -->
+            <div class="col-xs-1" id="durTime">0:00</div><!-- .main-slide -->
+            <div class="clearfix"></div>
+            <br>
+            <div class="col-xs-7 controls">
+              <button id="prev" class="btn btn-outline-info"><i class="fa fa-chevron-left"></i></button>
+              <button id="play" class="btn btn-outline-info"><i class="fa fa-play playico"></i></button>
+              <button id="stop" class="btn btn-outline-info"><i class="fa fa-stop"></i></button>
+              <button id="next" class="btn btn-outline-info"><i class="fa fa-chevron-right"></i></button> 
+              <!-- sound slider styling -->
+              <div class="btn-group dropdown">
+                <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-volume-up volico" id="vbtnico"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <input type="range" id="volslider" min="0" max="100" value="100">
+                </div>
+              </div>
+
+              <button id="shuffle" class="btn btn-outline-info not-clicked"><i class="fa fa-random"></i></button>
+              <button id="loop" class="btn btn-outline-info not-clicked"><i class="fa fa-undo"></i></button>
+            </div><!-- .Controls -->
+            <div class="col-xs-5 meta-data">
+              <div class="row">
+                <div class="col-xs-3">
+                  <img src="assets/img/sound-logo.png" id="thepic" height="80" class="thepicture">
+                </div>
+                <div class="col-xs-9 meta">
+                  <span class="title" id="thetitle">Select Audio File</span>
+                  <span id="theartist"></span> 
+                </div>
+              </div><!-- .row -->
+            </div>
+          </div><!-- .row -->
+        </div><!-- .container -->
+      </div><!-- .audio-played -->
+    </footer>
+
+  </div><!-- The Main Div -->
+
+
+  <!-- Scripts -->
+  <script>window.$ = window.jQuery = require("jquery");</script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/functions.js"></script>
+  <script src="assets/js/style.js"></script>
+</body>
+</html>
