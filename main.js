@@ -20,21 +20,6 @@ fs.access('file.txt', fs.constants.F_OK , (err) => {
 });
 
 
-//Record Window
-let recordOpenWindow = () => {
-  recordWindow = new BrowserWindow({
-    width:800,
-    height:600,
-    title: "Record - Sound",
-    icon: path.join(__dirname , 'assets/img/sound-logo.png') 
-  });
-  recordWindow.loadURL(url.format({
-    pathname: path.join(__dirname , 'recordWindow.html'),
-    protocol: 'file:',
-    slashes: true
-  })); 
-  // recordWindow.setMenu(null);
-}
 
 //About Window
 let aboutopenWindow = () => {
@@ -165,13 +150,6 @@ const headermenu = [
         accelerator: process.platform == "darwin" ? "Command + Shift + O" : "Ctrl + Shift + O",
         click(){ openThatDir(); }
       },
-      // {
-      //   label: "Record Microphone",
-      //   accelerator: process.platform == "darwin" ? "Command + R" : "Ctrl + R",
-      //   click(){
-      //     recordOpenWindow();
-      //   }
-      // },
       {
         label: "Quit",
         accelerator: process.platform == "darwin" ? "Command + Q" : "Ctrl + Q",
