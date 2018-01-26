@@ -1,4 +1,4 @@
-![Sound](/assets/img/sound-logo.png  | width=50)
+![Sound](/assets/img/sound-logo.png){:height="100" width="100"}
 # Sound - A Music Player App
 __ A Simple Music Player App in Electron __
 
