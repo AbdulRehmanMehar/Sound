@@ -1,4 +1,4 @@
-![Sound](https://github.com/AbdulRehmanMehar/Sound/assets/img/sound-logo.png)
+![Sound](/assets/img/sound-logo.png)
 # Sound - A Music Player App
 __ A Simple Music Player App in Electron __
 
