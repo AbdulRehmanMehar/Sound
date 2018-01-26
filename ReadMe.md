@@ -1,4 +1,4 @@
-![Sound](/assets/img/sound-logo.png)
+![Sound](/assets/img/sound-logo.png  =250x250)
 # Sound - A Music Player App
 __ A Simple Music Player App in Electron __
 
