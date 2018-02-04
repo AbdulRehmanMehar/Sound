@@ -108,3 +108,9 @@ html,body{margin: 0; padding: 0; overflow-x: hidden;}
 .section#footer div i{color: #f00;}
 .section#footer div a{color: #fff; transition: all 320ms;} 
 .section#footer div a:hover{color: #f00;}
+@media(max-width: 768px){
+	.section#home{display: none;}
+	a[href="#home"]{display: none;}
+	.section#testimonials{font-size: 10px;}
+}
+
