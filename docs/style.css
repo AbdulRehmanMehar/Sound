@@ -5,6 +5,5 @@ html,body{
 .background{
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
 }
 nav .brand-logo.center .background{height: 50px; width: 50px; border-radius: 100%;}
