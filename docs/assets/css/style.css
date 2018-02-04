@@ -111,6 +111,7 @@ html,body{margin: 0; padding: 0; overflow-x: hidden;}
 @media(max-width: 768px){
 	.section#home{display: none;}
 	a[href="#home"]{display: none;}
-	.section#testimonials{font-size: 10px;}
+	.section#testimonials .wrapper h3.align-center{display: none;}
+	.section#download .btns a{display: block; margin: 0 auto}
 }
 
