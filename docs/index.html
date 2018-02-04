@@ -1,19 +1,128 @@
 <!doctype html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Sound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/sound-logo.png">
+  <title>Sound - Music Player</title>
 </head>
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center"> <div class="background" style="background-image: url(../assets/img/sound-logo.png)"></div> Sound</a>
-    </div>
-  </nav>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<div class="flex-wrapper" id="preloader"> <!-- Preloader -->
+		<div class="background" style="background-image: url(assets/img/sound-logo.png);"></div>
+		<div class="info align-center">
+			<h1>Sound</h1>
+			<p>A Music Player App</p>
+		</div>
+		<div class="footer">
+			<div class="loader"></div>
+			<h6>
+				Made with
+				<i class="fa fa-heart"></i>
+				By 
+				<a href="https://github.com/AbdulRehmanMehar" target="_blank">Abdul Rehman</a>
+			</h6>
+		</div>
+	</div>
+
+	<div class="container-fluid hidden" id="mainContent">
+		<div class="navbar-fixed">
+			<nav>
+		    <div class="nav-wrapper">
+		      <a href="#home" class="brand-logo"> 
+		      	<div class="background" 
+		      		style="
+			      		background-image: url(assets/img/sound-logo.png); 
+			      		height: 50px; 
+			      		width: 50px;
+			      		margin: 5px 20px;
+		      		">
+		      	</div>
+		      </a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="#home">Home</a></li>
+		        <li><a href="#testimonials">Testimonials</a></li>
+		        <li><a href="#download">Download</a></li>
+		      </ul>
+		    </div>
+	  	</nav> 
+		</div><!-- Navbar -->
+		
+  	<!-- Home -->
+  	<section id="home" class="section">	
+			<div class="background parent" style="background-image: url(assets/img/imac.png);"></div>
+			<div class="background child" style="background-image: url(assets/img/bg.png);"></div>
+  	</section>
+  	<!-- Testimonials -->
+  	<section id="testimonials" class="section">
+  	<div class="wrapper">
+		  	<h3 class="align-center">What People Say About "Sound"</h3> <br>
+	  		<div class="slider">
+
+		  		<ul class="slides">
+		  			<li>
+		  				<div class="slider-item">
+			  				<div class="background" style="background-image: url(assets/img/tasawar.jpg);"></div>
+			  				<div class="info">
+				  				<h5>Tasawar Gujjar</h5>
+			  					<h6>
+			  						Really a good music player for pc.You can make playlist which remains same even if you exit the program
+			  					</h6>
+			  				</div>
+			  			</div>
+		  			</li>
+		  			<li>
+		  				<div class="slider-item">
+			  				<div class="background" style="background-image: url(assets/img/adan.jpg);"></div>
+			  				<div class="info">
+				  				<h5>Adan Virk</h5>
+			  					<h6>
+			  						Very user friendly and easy to use.You'll love it and will use it as your daily driver!
+			  					</h6>
+			  				</div>
+			  			</div>
+		  			</li>
+		  			<li>
+		  				<div class="slider-item">
+		  				<div class="background" style="background-image: url(assets/img/nisar.jpg);"></div>
+		  				<div class="info">
+			  				<h5>Nisar Randhawa</h5>
+		  					<h6>
+		  						An amazing software to listen music on pc.I wish to have it on Mobile Phone!
+		  					</h6>
+		  				</div>
+		  			</div>
+		  			</li>
+		  		</ul>
+	  		</div>
+  		</div>
+  	</section>
+		<!-- Download -->
+  	<section id="download" class="section">
+  		
+  		<div class="btns">
+	  		<h3 class="align-center">Download For ...</h3>
+  			<a class="waves-effect waves-light btn" > 
+	  			<i class="fa fa-windows"></i> Windows 
+	  		</a> &nbsp; 
+	  		<a class="waves-effect waves-light btn"> 
+	  			<i class="fa fa-linux"></i> Debian | Ubuntu 
+	  		</a>
+  		</div>
+  	</section>
+  	<section id="footer" class="section">
+  		<div>
+  			Made with <i class="fa fa-heart"></i> By 
+  			<a href="https://github.com/AbdulRehmanMehar" target="_blank">Abdul Rehman</a> 
+			</div>
+  	</section>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="assets/js/init.js"></script>
 </body>
 </html>
