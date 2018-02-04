@@ -1,4 +1,4 @@
-function getos() {
+function getOS() {
   var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
       macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
@@ -21,8 +21,8 @@ function getos() {
   return os;
 }
 
-if((getos() == 'Android') || (getos() == 'iOS') || (getos() == 'Mac OS')){
-  alert(`Hey ${getos()} user! We don't have made software for your plateform. i.e(${getos()})`)
+if((getOS() === 'Android') || (getOS() === 'iOS') || (getOS() === 'Mac OS')){
+  alert(`Hey ${getOS()} user! We don't have made software for your plateform. i.e(${getOS()})`)
 }else{
   setTimeout(() => {
     $("#preloader").addClass("hidden");
