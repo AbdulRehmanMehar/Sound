@@ -23,12 +23,12 @@ function getOS() {
 
 if((getOS() === 'Android') || (getOS() === 'iOS') || (getOS() === 'Mac OS')){
   alert(`Hey ${getOS()} user! We don't have made software for your plateform. i.e(${getOS()})`)
-}else{
+}
   setTimeout(() => {
     $("#preloader").addClass("hidden");
     $("#mainContent").removeClass("hidden");
   },2000);
-}
+
 
 /*
 ----- Smooth Scrolling
