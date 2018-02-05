@@ -1,29 +1,4 @@
-function getOS() {
-  var userAgent = window.navigator.userAgent,
-      platform = window.navigator.platform,
-      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-      os = null;
 
-  if (macosPlatforms.indexOf(platform) !== -1) {
-    os = 'Mac OS';
-  } else if (iosPlatforms.indexOf(platform) !== -1) {
-    os = 'iOS';
-  } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os = 'Windows';
-  } else if (/Android/.test(userAgent)) {
-    os = 'Android';
-  } else if (!os && /Linux/.test(platform)) {
-    os = 'Linux';
-  }
-
-  return os;
-}
-
-if((getOS() === 'Android') || (getOS() === 'iOS') || (getOS() === 'Mac OS')){
-  alert(`Hey ${getOS()} user! We don't have made software for your plateform. i.e(${getOS()})`)
-}
   setTimeout(() => {
     $("#preloader").addClass("hidden");
     $("#mainContent").removeClass("hidden");
@@ -92,3 +67,37 @@ $('a[href*="#"]')
 $(document).ready(function(){
   $('.slider').slider();
 });
+
+
+
+
+
+
+function getOS() {
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'Mac OS';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'iOS';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'Windows';
+  } else if (/Android/.test(userAgent)) {
+    os = 'Android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'Linux';
+  }
+
+  return os;
+}
+
+if((getOS() === 'Android') || (getOS() === 'iOS') || (getOS() === 'Mac OS')){
+  alert(`Hey ${getOS()} user! We don't have made software for your plateform. i.e(${getOS()})`)
+}
+
+
