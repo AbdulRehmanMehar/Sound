@@ -1,0 +1,21 @@
+{
+  "name": "Sound",
+  "version": "2.0.0",
+  "description": "Simple Music Player to Play MP3 Files.You Can Open Media Files or Whole Directory to Play",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . Sound --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win32.ico --prune=true --out=release-builds --version-string.CompanyName=\"Mehar Software House\" --version-string.FileDescription=\"Sound by Mehar Software House\" --version-string.ProductName=\"Sound\"",
+    "pack": "build --dir"
+  },
+  "build": {
+    "appId": "com.github.abdulrehmanmehar.sound",
+    "productName": "Sound"
+  },
+  "author": "Mehar Software House",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jsmediatags": "^3.8.1"
+  }
+}
